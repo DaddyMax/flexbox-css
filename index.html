@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox CSS</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Sandbox for Flexbox CSS</h2>
+    <div class="desc">Welcome here! I present you simple sandbox, where is collected all basic properties of Flexbox. You can enable every property and reset it, or reset all enabled properties. Active values of properties is highlighted by gray background. The difference of this sandbox from others is that here you can combine properties and look at the behavior of elements. Just change view to Full Page and enjoy!</div>
+    <div class="container">
+        <div class="style">
+            <b>justify-content:</b> <br><span class="jc">flex-start</span><span class="jc">flex-end</span><span class="jc">center</span><span class="jc">space-between</span><span class="jc">space-around</span><span class="jc">space-evenly</span><span class="jc reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>flex-direction:</b> <br><span class="fd">row</span><span class="fd">row-reverse</span><span class="fd">column</span><span class="fd">column-reverse</span><span class="fd reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>flex-wrap:</b> <br><span class="fw">nowrap</span><span class="fw">wrap</span><span class="fw">wrap-reverse</span><span class="fw reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>align-content: <span>(working with flex-wrap:wrap;)</span></b> <br><span class="ac">flex-start</span><span class="ac">flex-end</span><span class="ac">center</span><span class="ac">space-between</span><span class="ac">space-around</span><span class="ac">space-evenly</span><span class="ac">stretch</span><span class="ac reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>align-items:</b> <br><span class="ai">flex-start</span><span class="ai">flex-end</span><span class="ai">center</span><span class="ai">baseline</span><span class="ai">stretch</span><span class="ai reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>align-self: <span>(for example, Item 3)</span></b> <br><span class="as">flex-start</span><span class="as">flex-end</span><span class="as">center</span><span class="as">baseline</span><span class="as">stretch</span><span class="as reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>flex-grow: <span>(for example, Item 3)</span></b> <br><span class="fg">0</span><span class="fg">1</span><span class="fg reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>order: <span>(for example, Item 3)</span></b> <br><span class="od">-1</span><span class="od">0</span><span class="od">1</span><span class="od reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>flex-basis: <span>(for example, Item 3)</span></b> <br><span class="fb">10%</span><span class="fb">40%</span><span class="fb">100%</span><span class="fb reset">(reset)</span>
+        </div>
+        <div class="style">
+            <b>flex-shrink: <span>(for example, Item 3)</span></b> <br><span class="fs">0</span><span class="fs">1</span><span class="fs">2</span><span class="fs reset">(reset)</span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="reset" id="full-reset">(reset all)</div>
+        <div class="wrap" id="wrap">
+            <div class="items" id="I1">Item 1</div>
+            <div class="items" id="I2">Item 2</div>
+            <div class="items" id="I3">Item 3</div>
+            <div class="items" id="I4">Item 4</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
