@@ -13,6 +13,9 @@ var od = document.getElementsByClassName('od');
 var fb = document.getElementsByClassName('fb');
 var fs = document.getElementsByClassName('fs');
 
+var border = document.getElementById("border-text");
+var resize = document.getElementById("wrap");
+
 reset.onclick = function () {
     wrap.style.justifyContent = "";
     for (i = 0; i < jc.length; i++) {
@@ -56,8 +59,8 @@ reset.onclick = function () {
       items[i].style.width = "";
       fs[i].style.backgroundColor = "#fff";
     }
+    wrap.style.width = "100%";
 }
-  
 for (i = 0; i < jc.length; i++) {
     jc[0].onclick = function () {
       wrap.style.justifyContent = "flex-start";
@@ -434,3 +437,35 @@ for (i = 0; i < fs.length; i++) {
       }
     }
   }
+
+window.onload = function() {
+  border.onmousedown = function() {
+    var currentWidth = resize.offsetWidth;
+    if (currentWidth <= 600 && currentWidth >= 150) {
+      var lock = true;
+      var pos = event.pageX;
+      document.onmousemove = function(event) {
+        if (lock) {
+          res = currentWidth + event.pageX - pos;
+          if (res <= 600 && res >= 150) {
+            resize.style.width = res + "px";
+          } else {
+            if (res < 150) {
+              resize.style.width = "150px";
+              lock = false;
+            } else {
+              resize.style.width = "600px";
+              lock = false;
+            }
+          }
+        }
+        border.onmouseup = function() {
+          lock = false;
+        };
+      };
+      border.onmouseup = function() {
+        lock = false;
+      };
+    }
+  };
+};
